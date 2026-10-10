@@ -229,10 +229,4 @@ export const BACKFILL_TICKS = 48 * TICKS_PER_HOUR
 /** Irrigação de referência por calendário fixo (sem sensores), usada para medir economia */
 export const CALENDAR_IRRIGATION_MM_DAY = 8
 
-export const teamMembers = [
-  { name: 'Israel Igarashi', rm: '98359' },
-  { name: 'Leonardo Bernardes', rm: '99788' },
-  { name: 'Matheus Medeiros', rm: '97774' },
-  { name: 'Ryan Aquino', rm: '550422' },
-  { name: 'Gabriel Oliveira', rm: '98565' },
-]
+export const teamMembers = [{ name: 'Gabriel Oliveira', rm: '98565' }]
