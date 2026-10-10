@@ -7,10 +7,18 @@
   --text-strong: #f5f8f8;
   --text-muted: #9da9ad;
   --muted: #778489;
-  --ice: #61dbe8;
+  --accent: #a3d977;
+  --accent-ink: #0d1408;
+  --water: #61dbe8;
   --green: #64d479;
   --amber: #f0b84d;
   --red: #ef6c6c;
+  /* Gráficos: grade e eixos recessivos, um passo acima da superfície */
+  --chart-grid: #252b2c;
+  --chart-baseline: #3a4244;
+  --chart-axis: #8a9599;
+  --chart-reference: #8f9a9e;
+  --chart-band: rgba(100, 212, 121, 0.09);
   --font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', sans-serif;
   color: var(--text);
@@ -40,6 +48,10 @@ body {
 button,
 input {
   letter-spacing: 0;
+}
+
+table {
+  border-collapse: collapse;
 }
 
 button {
