@@ -3,7 +3,10 @@
 ## Integrantes
 
 Gabriel Oliveira - RM 98565
+
 Leonardo Mansur - RM 551659
+
+##
 
 Plataforma web que monitora uma fazenda irrigada e automatiza a irrigação a partir de dados de sensores (Fase 6).
 
