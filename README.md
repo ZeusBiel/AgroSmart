@@ -1,51 +1,43 @@
-# Lunar H2O Rover
+# AgroSmart
 
-Protótipo web mobile-first para monitorar uma missão lunar fictícia de extração de água em gelo no polo sul lunar. O app usa dados mockados no front-end e simula o painel de um operador de missão.
+Plataforma web que monitora uma fazenda irrigada e automatiza a irrigação a partir de dados de sensores (Fase 6).
 
-## Stack
+**Fluxo:** sensores IoT (simulados) → processamento → análise → automação → painel.
 
-- React
-- TypeScript
-- Vite
-- Lucide React
-
-## Telas
-
-- Login com validação de e-mail e senha mínima de 6 caracteres.
-- Dashboard da missão com volume coletado, temperatura, gelo detectado, bateria e progresso de coleta.
-- Status do rover com telemetria, sensores IoT e ações simuladas.
-- Histórico de relatórios com volume, qualidade do gelo e resultado da operação.
-
-## Integrantes
-
-- Israel Igarashi - RM 98359
-- Leonardo Bernardes - RM 99788
-- Matheus Medeiros - RM 97774
-- Ryan Aquino - RM 550422
-- Gabriel Oliveira - RM 98565
+| Requisito | Como é atendido |
+|---|---|
+| Coleta de dados | 21 sensores simulados (clima e solo de 4 talhões) enviam leituras a cada 10 min, com ruído e falhas. |
+| Processamento | Validação, correção de leituras inválidas, suavização e série temporal de 72 h. |
+| Automação inteligente | Previsão da umidade do solo e 9 regras que abrem/fecham válvulas e emitem alertas, com o motivo registrado. |
+| Visualização | Painel com indicadores, mapa, gráficos, recomendações e log de decisões. |
 
 ## Como rodar
+
+Requer Node.js 22.12+.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Para build de produção:
+Entre com qualquer e-mail válido e senha de 6+ caracteres, ou use **Entrar em modo demonstração**. Tudo roda no navegador, sem backend.
 
 ```bash
-npm run build
+npm test        # testes automatizados
+npm run build   # build de produção
 ```
 
-## Autenticação mockada
+## Estrutura
 
-O login aceita qualquer e-mail em formato válido e qualquer senha com 6 ou mais caracteres. Não há backend real nem persistência de sessão.
+```
+src/
+  iot/         simulador dos sensores
+  pipeline/    validação e série temporal
+  analytics/   previsões, indicadores e recomendações
+  automation/  regras de irrigação e alertas
+  screens/     telas da interface
+```
 
-## Dados mockados
+## Integrante
 
-Os modelos estão em `src/types.ts` e os dados iniciais em `src/data/mockData.ts`.
-
-## Asset visual
-
-A imagem `public/shackleton-crater.jpeg` vem da NASA:
-https://www.nasa.gov/missions/lro/nasa-moon-camera-mosaic-sheds-light-on-lunar-south-pole/
+Gabriel Oliveira - RM 98565
