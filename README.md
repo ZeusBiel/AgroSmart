@@ -1,5 +1,10 @@
 # AgroSmart
 
+## Integrantes
+
+Gabriel Oliveira - RM 98565
+Leonardo Mansur - RM 551659
+
 Plataforma web que monitora uma fazenda irrigada e automatiza a irrigação a partir de dados de sensores (Fase 6).
 
 **Fluxo:** sensores IoT (simulados) → processamento → análise → automação → painel.
@@ -37,7 +42,3 @@ src/
   automation/  regras de irrigação e alertas
   screens/     telas da interface
 ```
-
-## Integrante
-
-Gabriel Oliveira - RM 98565
